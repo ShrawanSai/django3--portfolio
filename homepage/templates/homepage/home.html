@@ -1,0 +1,276 @@
+
+
+{% extends 'homepage/base.html' %}
+{% block content %}
+{% load static %}
+
+
+  <!-- start section header -->
+  <div id="header" class="home">
+
+    <div class="container">
+      <div class="header-content">
+        <h1>I'm <span class="typed"></span></h1>
+        <p>AI Enthusisat, Developer, Trekker</p>
+
+        <ul class="list-unstyled list-social">
+          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+          <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+          <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
+          <li><a href="#"><i class="ion-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End section header -->
+
+
+  <!-- start section about us -->
+  <div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between">
+
+        <div class="col-lg-4 ">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <img src="{% static 'homepage/images/me.jpg' %}" class="img-responsive" alt="me">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="about-descr">
+
+            <p class="p-heading">About Me</p>
+            <p class="separator">I am a 3rd year CSE Undergraduate student who takes pride in building
+applications involving Data Science and Natural Language Processing. I am
+now eager to apply the same knowledge to real-world business problems.</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section about us -->
+
+
+  
+
+
+  <!-- start section portfolio -->
+  <div id="portfolio" class="text-center paddsection">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>My Projects</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          
+
+          <div class="portfolio-container">
+            {% for p in projects %}
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign">
+              <a class="popup-img" href="{{p.image.url}}">
+                <img src="{{p.image.url}}" alt="img">
+              </a>
+			  <br>
+              <h4> {{p.title}} </h4>
+              {% if p.url %}
+              <a href="{{p.url}}">Link</a>
+              {% endif %}
+              
+            </div>
+            {% endfor %}
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- start section about us -->
+  <div id="about" class="paddsection">
+    <div class="container">
+      <section id="skills" class="skills section-bg">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Skills</h2>
+            <p>So here is where i showcase my proficiency i guess. I have been an enthusiast for almost all imaginable fields and this has led to be a jack of all trades.</p>
+          </div>
+  
+          <div class="row skills-content">
+  
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill">Python  <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Machine Learning <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Data analysis and Visualisation <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                </div>
+              </div>
+  
+              <div class="progress">
+                <span class="skill">Natural Language Processing <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                </div>
+              </div>
+  
+              <div class="progress">
+                <span class="skill">Deep Learning<i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Web Scraping <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Image Processing <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill">Version Control (Git & Github) <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+              </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Java <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Cloud Service Dialog Agents (Dialogflow, IBM Watson) <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                </div>
+              </div>
+  
+              <div class="progress">
+                <span class="skill">AWS and GCP <i class="val">55%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Structured Query Language (SQL) <i class="val">65%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Django and Django Rest <i class="val">35%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Datastructures &amp; Algorithms <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Skills Section -->
+    </div>
+  </div>
+  
+  <!-- End section portfolio -->
+
+   <!--{% for p in projects %}
+
+  <h2>{{p.title}}</h2>
+  <p>{{p.description}}</p>
+  <img src ="{{p.image.url}}"></img>
+  {% if p.url %}
+  <a href="{{p.url}}">Link</a>
+  {% endif %}
+  {% endfor %}
+
+  <!-- start sectoion contact -->
+
+
+  <div id="contact" class="paddsection">
+    <div class="container">
+      <div class="contact-block1">
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="contact-contact">
+
+              <h2 class="mb-30">GET IN TOUCH</h2>
+              <p>You can contact me via these or any of my social media handles</p>
+
+              <ul class="contact-details">
+                <li><span>Phone Number: +91 7550148020</span></li>
+                <li><span>Email Address:  msaishrawan@gmail.com</span></li>
+              </ul>
+
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+  
+  <!-- start sectoion contact -->
+ 
+
+ <!-- <h1>Shrawan's Portfolio</h1>
+
+
+
+<a href = "{% url 'hack:all_hacks' %}">Hacks</a>
+<br><br>
+<img src = "{% static 'homepage/dp.jpg' %} ">
+<br><br>
+<a href = "  'homepage/Shrawan\'s resume.pdf' %} " >Resume</a>
+
+{% for p in projects %}
+
+<h2>{{p.title}}</h2>
+<p>{{p.description}}</p>
+<img src ="{{p.image.url}}"></img>
+{% if p.url %}
+<a href="{{p.url}}">Link</a>
+{% endif %}
+{% endfor %}
+

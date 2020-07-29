@@ -1,0 +1,114 @@
+{% extends 'homepage/base.html' %}
+{% block content %}
+{% load static %}
+<div id="about" class="paddsection">
+  <div class="container">
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>My Certifications </h2>
+          
+        </div>
+
+        <div class="row skills-content">
+          
+          <div class="col-lg-6">
+            <ul>
+            
+            <li><div class="progress">
+              <span class="skill">AWS Certified Cloud Practitioner </span>
+            </div></li>
+            <li><div class="progress">
+              <span class="skill">Applied Machine Learning with Python- VIT Value Added Program </span>
+            </div></li>
+            <li><div class="progress">
+              <span class="skill">Microsoft Technology Associate for Python Programming </span></li>
+              
+            </div>
+            </ul>
+
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+<!-- start section journal -->
+<div id="journal-blog" class="text-left  paddsections">
+
+    <div class="container">
+      <div class="section-title text-center">
+        
+        <h2>Shrawan has attended {{hacks.count}} Hackathon{{hacks.count|pluralize}}</h2>
+      </div>
+    </div>
+
+    
+
+    <div class="container">
+        <div class="journal-block">
+          <div class="row">
+            {% for h in hacks %}
+  
+            <div class="col-lg-4 col-md-6">
+              <div class="journal-info mb-30">
+  
+                <a href="{% url 'hack:detail' h.id %}"><img src="{{h.image.url}}" class="img-responsive" alt="img"></a>
+  
+                <div class="journal-txt">
+  
+                  <h4><a href="{% url 'hack:detail' h.id %}">{{h.title}}</a></h4>
+                  <p class="separator">{{h.description|truncatechars:15}}
+                  </p>
+  
+                </div>
+  
+              </div>
+            </div>
+  
+            {% endfor %}
+  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="paddsection">
+      <div class="container">
+        <section id="skills" class="skills section-bg">
+          <div class="container">
+    
+            <div class="section-title">
+              <h2>Organizations I am a part of</h2>
+              
+            </div>
+    
+            <div class="row skills-content">
+              
+              <div class="col-lg-6">
+                <ul>
+
+                <li><div class="progress">
+                  <span class="skill"> Member at Ohuru.tech </span>
+                </div></li>
+                <li><div class="progress">
+                  <span class="skill">Senior year CS Coordinator at RoboVITics </span>
+                </div></li>
+                <li><div class="progress">
+                  <span class="skill">Director of Public Relations at VIT Trekking Club</span>
+                  
+                </div></li>
+                </ul>
+    
+                
+              </div>
+            </div>
+    
+          </div>
+        </section>
+      </div>
+    </div>
+    {% endblock %}
