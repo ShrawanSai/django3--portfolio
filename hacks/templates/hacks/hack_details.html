@@ -11,18 +11,21 @@
             <div class="container-main single-main">
               <div class="col-md-12">
                 <div class="block-main mb-30">
-                  <img src="{{hack.image.url}}" class="img-responsive" alt="img">
+                  <img src="{{hack.image.url}}" class="img-responsive" alt="img" style="width: 400px;">
                   <div class="content-main single-post padDiv">
                     <div class="journal-txt">
                       <h4><a href="#">{{ hack.title }}</a></h4>
                     </div>
                     <div class="post-meta">
                       <ul class="list-unstyled mb-0">
-                        <li class="date">Date: <a href="#">{{ hack.date }}</a></li>
+                        <li class="date">Hackathon Date: {{ hack.date }}</li>
                         
                       </ul>
                     </div>
                     <p class="mb-30">{{ hack.description }}</p>
+                    <a href="{{ hack.url }}"><h4>Click on the Link to know more</h4></a><br><br><br><br>
+                    <a href="{% url 'hack:all_hacks' %}"><p class="mb-30">Go Back</p></a>
+
                   </div>
                 </div>
               </div>

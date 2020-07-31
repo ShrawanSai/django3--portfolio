@@ -42,7 +42,7 @@
     <div class="container">
       <div class="section-title text-center">
         
-        <h2>Shrawan has attended {{hacks.count}} Hackathon{{hacks.count|pluralize}}</h2>
+        <h2>I have attended {{hacks.count}} Hackathon{{hacks.count|pluralize}}</h2>
       </div>
     </div>
 
@@ -56,7 +56,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="journal-info mb-30">
   
-                <a href="{% url 'hack:detail' h.id %}"><img src="{{h.image.url}}" class="img-responsive" alt="img"></a>
+                <a href="{% url 'hack:detail' h.id %}"><img src="{{h.image.url}}" class="img-responsive" alt="img" style="width: 250px; height: 250px;"></a>
   
                 <div class="journal-txt">
   

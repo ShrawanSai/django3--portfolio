@@ -39,6 +39,8 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+
+
 </head>
 
 <body>
@@ -49,7 +51,7 @@
       <div class="container">
 
         <div class="logo">
-          <a href="#header"><img src="{% static 'homepage/images/logo1.png' %}" alt="logo"></a>
+          <a href="{% url 'homepage' %}"><img src="{% static 'homepage/images/logo1.png' %}" alt="logo"></a>
         </div>
 
         <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
@@ -58,7 +60,7 @@
           <li><a href="{% url 'homepage' %}" class="smoothScroll">Home</a></li>
           <li><a href="{% url 'homepage' %}#about" class="smoothScroll">About</a></li>
           <li><a href="{% url 'homepage' %}#portfolio" class="smoothScroll">Projects</a></li>
-          <li><a href="{% url 'hack:all_hacks' %}" class="smoothScroll">Hacks</a></li>
+          <li><a href="{% url 'hack:all_hacks' %}" class="smoothScroll">More About Me</a></li>
           <li><a href="{% static 'homepage/july resume.pdf' %} " class="smoothScroll">Download Resume</a></li>
           <li><a href="{% url 'homepage' %}#contact" class="smoothScroll">Contact</a></li>
         </ul>
@@ -77,12 +79,9 @@
       <div class="socials-media text-center">
 
         <ul class="list-unstyled">
-          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="#"><i class="ion-social-instagram"></i></a></li>
-          <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-          <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
-          <li><a href="#"><i class="ion-social-dribbble"></i></a></li>
+          <li><a href="https://www.facebook.com/shrawan.sai.587"><i class="ion-social-facebook"></i></a></li>
+          <li><a href="https://twitter.com/ShrawanSai4?s=08"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="https://github.com/ShrawanSai/"><i class="ion-social-github"></i></a></li>
         </ul>
 
       </div>
